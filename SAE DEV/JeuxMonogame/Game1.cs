@@ -40,7 +40,7 @@ namespace JeuxMonogame
         protected override void LoadContent()
         {   
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _tiledMap = Content.Load<TiledMap>("mapGenerale");
+            _tiledMap = Content.Load<TiledMap>("Vanquiom");
             _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
 
             // TODO: use this.Content to load your game content here
