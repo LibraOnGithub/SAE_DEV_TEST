@@ -13,7 +13,9 @@ namespace JeuxMonogame
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private int _vitessedebasejoueur = 10;
+        private Vector2 _positionPerso;
+        private int _vitesseperso = 3;
+        private AnimatedSprite _perso;
 
         public Game1()
         {
@@ -26,14 +28,21 @@ namespace JeuxMonogame
         {
             // TODO: Add your initialization logic here
 
+            _positionPerso = new Vector2(20, 340);
+
             base.Initialize();
+            
         }
 
         protected override void LoadContent()
         {   
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
+
             // TODO: use this.Content to load your game content here
+            
+            SpriteSheet spriteSheet = Content.Load<SpriteSheet>("persoAnimation.sf", new JsonContentLoader());
+            _perso = new AnimatedSprite(spriteSheet);
         }
 
         protected override void Update(GameTime gameTime)
@@ -42,6 +51,7 @@ namespace JeuxMonogame
                 Exit();
 
             // TODO: Add your update logic here
+
 
             base.Update(gameTime);
         }
