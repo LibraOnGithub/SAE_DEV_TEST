@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended.Tiled;
+using MonoGame.Extended.Tiled.Renderers;
 
 namespace JeuxMonogame
 {
@@ -8,7 +10,7 @@ namespace JeuxMonogame
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private int _vitessedebasejoueur2;
+        private int _vitessedebasejoueur;
 
         public Game1()
         {
