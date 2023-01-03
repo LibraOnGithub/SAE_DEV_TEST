@@ -8,7 +8,7 @@ namespace JeuxMonogame
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private int _vitessedebasejoueur;
+        private int _vitessedebasejoueur2;
 
         public Game1()
         {
