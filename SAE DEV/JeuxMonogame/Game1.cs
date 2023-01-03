@@ -45,7 +45,7 @@ namespace JeuxMonogame
 
             // TODO: use this.Content to load your game content here
 
-            SpriteSheet spriteSheet = Content.Load<SpriteSheet>("persoAnimation.sf", new JsonContentLoader());
+            SpriteSheet spriteSheet = Content.Load<SpriteSheet>("PersoAnimation.sf", new JsonContentLoader());
             _perso = new AnimatedSprite(spriteSheet);
         }
 
