@@ -16,7 +16,10 @@ namespace JeuxMonogame
         private Vector2 _positionPerso;
         private int _vitesseperso = 5;
         private AnimatedSprite _perso;
-        private AnimatedSprite _perso;
+        private TiledMap _tiledMap;
+        private TiledMapRenderer _tiledMapRenderer;
+        private AnimatedSprite perso;
+
 
         public Game1()
         {
@@ -30,7 +33,6 @@ namespace JeuxMonogame
             // TODO: Add your initialization logic here
 
             _positionPerso = new Vector2(20, 340);
-
             base.Initialize();
             
         }
@@ -38,10 +40,11 @@ namespace JeuxMonogame
         protected override void LoadContent()
         {   
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            _tiledMap = Content.Load<TiledMap>("mapGenerale");
+            _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
 
             // TODO: use this.Content to load your game content here
-            
+
             SpriteSheet spriteSheet = Content.Load<SpriteSheet>("persoAnimation.sf", new JsonContentLoader());
             _perso = new AnimatedSprite(spriteSheet);
         }
