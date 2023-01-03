@@ -1,0 +1,29 @@
+{
+  "textureAtlas": {
+    "texture": "C:\\Users\\rocher\\Downloads\\Download98804.png",
+    "regionWidth": 64,
+    "regionHeight": 64
+  },
+  "cycles": {
+    "danse": {
+      "frames": [126,127,128,129,130,131,132,133,346,347,348,349,350,351,352,353,252,253,254,255,256,257],
+      "isLooping": false,
+      "frameDuration": 0.1
+    },
+    "marcher droite": {
+      "frames": [198,199,200,201,202,203,204,205,206],
+      "isLooping": false,
+      "frameDuration": 0.1
+    },
+    "marcher gauche": {
+      "frames": [162,163,164,165,166,167,168,169,170],
+      "isLooping": false,
+      "frameDuration": 0.1
+    },
+    "meurt": {
+      "frames": [363,364,365],
+      "isLooping": false,
+      "frameDuration": 0.5
+    }
+  }
+}

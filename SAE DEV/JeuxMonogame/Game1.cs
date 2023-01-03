@@ -10,7 +10,7 @@ namespace JeuxMonogame
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private int _vitessedebasejoueur;
+        private int _vitessedebasejoueur = 10;
 
         public Game1()
         {
@@ -27,7 +27,7 @@ namespace JeuxMonogame
         }
 
         protected override void LoadContent()
-        {
+        {   
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
