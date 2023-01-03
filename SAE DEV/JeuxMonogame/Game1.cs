@@ -14,7 +14,7 @@ namespace JeuxMonogame
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Vector2 _positionPerso;
-        private int _vitesseperso = 3;
+        private int _vitesseperso = 5;
         private AnimatedSprite _perso;
 
         public Game1()
