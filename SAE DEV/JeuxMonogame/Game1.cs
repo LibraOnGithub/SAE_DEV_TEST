@@ -52,9 +52,6 @@ namespace JeuxMonogame
             _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
             _myScreen1 = new MyScreen1(this); // en leur donnant une référence au Game
             _myScreen2 = new MyScreen2(this);
-
-            // TODO: use this.Content to load your game content here
-
             SpriteSheet spriteSheet = Content.Load<SpriteSheet>("PersoPrincipaleAnimation.sf", new JsonContentLoader());
             _persoPrincipale = new AnimatedSprite(spriteSheet);
         }
@@ -86,7 +83,9 @@ namespace JeuxMonogame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            _tiledMapRenderer.Draw();
+            _spriteBatch.Begin();
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

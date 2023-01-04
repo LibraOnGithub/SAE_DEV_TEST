@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>P:/JEU VANQUIOM SAE/SAE DEV/JeuxMonogame/Content/../../../../../../MonoGame Saé DEV/plateforme.tsx</SourceFile>
+  <SourceTime>2023-01-04T10:20:03.163945+01:00</SourceTime>
+  <DestFile>P:/JEU VANQUIOM SAE/SAE DEV/JeuxMonogame/Content/bin/DesktopGL/Content/../../../../MonoGame Saé DEV/plateforme_0.xnb</DestFile>
+  <DestTime>2023-01-04T10:41:31.3419372+01:00</DestTime>
+  <Importer>TiledMapTilesetImporter</Importer>
+  <ImporterTime>2020-08-29T19:17:30+02:00</ImporterTime>
+  <Processor>TiledMapTilesetProcessor</Processor>
+  <ProcessorTime>2020-08-29T19:17:30+02:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset>
+    <string>P:/JEU VANQUIOM SAE/SAE DEV/JeuxMonogame/Content/bin/DesktopGL/Content/platformertiles_0.xnb</string>
+  </BuildAsset>
+  <BuildOutput />
+</PipelineBuildEvent>
