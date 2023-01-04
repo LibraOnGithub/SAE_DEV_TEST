@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended.Content;
+using MonoGame.Extended.Screens;
+using MonoGame.Extended.Screens.Transitions;
 using MonoGame.Extended.Serialization;
 using MonoGame.Extended.Sprites;
 using MonoGame.Extended.Tiled;
@@ -11,6 +13,9 @@ namespace JeuxMonogame
 {
     public class Game1 : Game
     {
+        public SpriteBatch SpriteBatch { get; set; }
+        private MyScreen1 _myScreen1;
+        private MyScreen2 _myScreen2;
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Vector2 _positionPersoPrincipale;
@@ -19,6 +24,7 @@ namespace JeuxMonogame
         private TiledMap _tiledMap;
         private TiledMapRenderer _tiledMapRenderer;
         private AnimatedSprite persoPrincipale;
+        private readonly ScreenManager _screenManager;
 
 
         public Game1()
@@ -26,6 +32,8 @@ namespace JeuxMonogame
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            _screenManager = new ScreenManager();
+            Components.Add(_screenManager);
         }
 
         protected override void Initialize()
@@ -42,6 +50,8 @@ namespace JeuxMonogame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _tiledMap = Content.Load<TiledMap>("Vanquiom");
             _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
+            _myScreen1 = new MyScreen1(this); // en leur donnant une référence au Game
+            _myScreen2 = new MyScreen2(this);
 
             // TODO: use this.Content to load your game content here
 
@@ -55,6 +65,18 @@ namespace JeuxMonogame
                 Exit();
 
             // TODO: Add your update logic here
+
+            KeyboardState keyboardState = Keyboard.GetState();
+            if (keyboardState.IsKeyDown(Keys.Left))
+            {
+                _screenManager.LoadScreen(_myScreen1, new FadeTransition(GraphicsDevice,
+                Color.Black));
+            }
+            else if (keyboardState.IsKeyDown(Keys.Right))
+            {
+                _screenManager.LoadScreen(_myScreen2, new FadeTransition(GraphicsDevice,
+                Color.Black));
+            }
 
 
             base.Update(gameTime);
